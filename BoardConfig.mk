@@ -25,6 +25,9 @@ ifdef OMAP_ENHANCEMENT
 COMMON_GLOBAL_CFLAGS += -DOMAP_ENHANCEMENT -DTARGET_OMAP3 -DOMAP_ENHANCEMENT_CPCAM -DOMAP_ENHANCEMENT_VTC
 endif
 
+# Build kernel using stock 4.6 toolchain
+TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6
+
 # Try to build the kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_p970_defconfig
 # Keep this as a fallback

@@ -35,4 +35,4 @@ sys.usb.state=mass_storage,adb
 persist.sys.usb.config=mass_storage,adb
 
 ## Limit activities
-sys.mem.max_hidden_apps=5
+sys.mem.max_hidden_apps=4

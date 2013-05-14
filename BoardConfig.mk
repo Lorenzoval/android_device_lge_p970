@@ -25,6 +25,8 @@ ifdef OMAP_ENHANCEMENT
 COMMON_GLOBAL_CFLAGS += -DOMAP_ENHANCEMENT -DTARGET_OMAP3 -DOMAP_ENHANCEMENT_CPCAM -DOMAP_ENHANCEMENT_VTC
 endif
 
+# Kernel Source
+TARGET_KERNEL_SOURCE := kernel/lge/p970
 # Try to build the kernel
 TARGET_KERNEL_CONFIG := cyanogenmod_p970_defconfig
 # Keep this as a fallback

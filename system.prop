@@ -9,7 +9,7 @@ ro.sf.lcd_density=240
 
 ## Radio stuffs
 ro.telephony.call_ring.multiple=false
-ro.telephony.call_ring.delay=3000
+ro.telephony.call_ring.delay=0
 ro.telephony.call_ring.absent=true
 rild.libpath=/system/lib/lge-ril.so
 rild.libargs=-d /dev/ttyspi0
@@ -37,3 +37,134 @@ ro.hwui.disable_scissor_opt=true
 
 # GPU Producer to CPU Consumer
 ro.bq.gpu_to_cpu_unsupported=1
+
+# NET TWEAKS START (REMOVE IF PROBLEMS APPEAR)
+ro.ril.hsxpa=3
+ro.ril.gprsclass=32
+ro.ril.hep=1
+ro.ril.hsdpa.category=28
+ro.ril.enable.3g.prefix=1
+ro.ril.htcmaskw1.bitmask=4294967295
+ro.ril.htcmaskw1=268449905
+ro.ril.hsupa.category=9
+ro.ril.enable.sdr=1
+ro.ril.enable.gea3=1
+ro.ril.enable.fd.plmn.prefix=23402,23410,23411
+ro.ril.disable.power.collapse=1
+ro.ril.def.agps.mode=2
+ro.ril.def.agps.feature=1
+ril.cdma.ppp.up=
+persist.ril.uart.flowctrl=10
+ro.mot.eri.losalert.delay=2000
+ro.ril.enable.a52=0
+ro.ril.enable.a53=1
+ro.ril.enable.dtm=1
+
+net.tcp.buffersize.default=6144,87380,110208,6144,16384,110208
+net.tcp.buffersize.wifi=262144,524288,1048576,262144,524288,1048576
+net.tcp.buffersize.lte=262144,524288,3145728,262144,524288,3145728
+net.tcp.buffersize.hsdpa=6144,262144,1048576,6144,262144,1048576
+net.tcp.buffersize.evdo_b=6144,262144,1048576,6144,262144,1048576
+net.tcp.buffersize.umts=6144,87380,110208,6144,16384,110208
+net.tcp.buffersize.hspa=6144,87380,262144,6144,16384,262144
+net.tcp.buffersize.gprs=6144,8760,11680,6144,8760,11680
+net.tcp.buffersize.edge=6144,26280,35040,6144,16384,35040
+# NET TWEAKS END
+
+
+# Raise JPG quality to 85%
+ro.media.enc.jpeg.quality=85
+
+# Render UI with GPU
+debug.sf.hw=1
+
+# Decrease dialing out delay
+ro.telephony.call_ring.delay=0
+ring.delay=0
+
+# Better Responsiveness & Speed
+windowsmgr.max_events_per_sec=150
+ro.max.fling_velocity=12000
+ro.min.fling_velocity=8000
+
+# Save battery
+wifi.supplicant_scan_interval=300
+pm.sleep_mode=1
+ro.ril.disable.power.collapse=0
+ro.ril.fast.dormancy.rule=0
+
+# Disable debugging notify icon on statusbar
+#persist.adb.notify=0
+
+# Increase overall touch responsiveness
+debug.performance.tuning=1
+video.accelerate.hw=1
+debug.egl.profiler=1
+debug.egl.hw=1
+debug.composition.type=gpu
+
+# Photo and video recording quality tweak
+ro.media.dec.jpeg.memcap=8000000
+ro.media.enc.hprof.vid.bps=8000000
+
+# Google DNS
+net.ppp0.dns1=8.8.8.8
+net.ppp0.dns2=8.8.4.4
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+
+# Disable blackscreen issue after a call
+ro.lge.proximity.delay=25
+mot.proximity.delay=25
+
+# Fix some application issues
+ro.kernel.android.checkjni=0
+
+# Phone will not wake up from hitting the volume rocker
+ro.config.hwfeature_wakeupkey=0
+
+# Force button lights on when screen is on
+ro.mot.buttonlight.timeout=0
+
+# Disable boot animation for faster boot. 1=off, 0=on
+#debug.sf.nobootanimation=0
+
+# Miscellaneous flags
+#ro.config.hw_menu_unlockscreen=false
+persist.sys.use_dithering=0
+persist.sys.purgeable_assets=1
+dalvik.vm.dexopt-flags=m=y
+dalvik.vm.verify-bytecode=false
+ro.mot.eri.losalert.delay=1000
+
+# LG flags
+persist.service.pcsync.enable=0
+persist.service.lgospd.enable=0
+
+# Disable LG ****
+# (flex must be enabled or phone app will FC) - needs moar testing!
+user.feature.flex=true
+user.feature.lgdrm=false
+user.feature.lgresource=false
+user.feature.lgpoweroff=false
+user.feature.ls_event=false
+user.feature.ls_normal=false
+user.feature.sui=false
+
+# Fast Reboot
+persist.sys.shutdown.mode=hibernate
+ro.config.hw_quickpoweron=true
+
+dalvik.vm.heapgrowthlimit=70m
+dalvik.vm.heapsize=70m
+persist.sys.purgeable_assets=1
+wifi.supplicant_scan_interval=180
+windowsmgr.max_events_per_sec=90
+ENFORCE_PROCESS_LIMIT=false
+MAX_SERVICE_INACTIVITY=
+MIN_HIDDEN_APPS=
+MAX_HIDDEN_APPS=
+CONTENT_APP_IDLE_OFFSET=
+EMPTY_APP_IDLE_OFFSET=
+MAX_ACTIVITIES=
+ACTIVITY_INACTIVE_RESET_TIME=
